@@ -1,10 +1,1 @@
-{
-  "users": [
-    { "username": "user1", "lastname": "asdasd", "email": "asdasd" },
-    { "username": "user2", "lastname": "zxczxc", "email": "qwe " },
-    { "username": "user", "lastname": "qweqwe", "email": "qweqwe " },
-    { "username": "asqerqwrd", "lastname": "kasjhdkasjhd", "email": "asd" },
-    { "lastname": "sa", "email": "sain@gmail.com" },
-    { "username": "Saina", "lastname": "sa", "email": "sain@gmail.com" }
-  ]
-}
+{"users":[{"username":"qwteqer","lastname":"sgadfgadfgad","email":"adgfadf"}]}
