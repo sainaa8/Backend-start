@@ -34,36 +34,53 @@
 
 ////////////////////////////////////////////////////////////////////////
 import { unlink, access } from "node:fs/promises";
-import express, { application } from "express";
+import express from "express";
 import fs from "fs";
-import { send } from "node:process";
-import { writeFile } from "node:fs/promises";
-import { writeFileSync } from "node:fs";
 
 const app = express();
 app.use(express.json());
 const port = 8000;
 
-const filePath = "/Users/23LP8204/Desktop/Node/user.json";
 //usernmae lastname ali neg ni naihgui bvl error(400) bad request butsaa
-app.post("/", async (req, res) => {
+const readFile = async () => {
   try {
-    const { username, lastname, email } = req.body;
-    const result = JSON.parse(fs.readFileSync(filePath, "utf-8"));
-
-    if (!username || !lastname || !email) {
-      res.status(400).send("bad request");
-    } else if (result.users.find((el) => el.email === email)) {
-      res.status(400).send("emaile dahin shalgana uu");
-    } else {
-      result.users.push({ username, lastname, email });
-      writeFileSync(filePath, JSON.stringify(result));
-      const lastResult = JSON.parse(fs.readFileSync(filePath));
-      res.send(lastResult);
-    }
-  } catch (error) {
-    res.status(500).send(error);
+    const filePath = await fs.readFileSync("./user.json", "utf8");
+    return filePath;
+  } catch (err) {
+    return null;
   }
+};
+app.post("/", async (req, res) => {
+  const { username, lastname, email } = req.body;
+
+  if (!username || !lastname || !email) {
+    res.end("usernmae, lastname or email is missing");
+  }
+
+  try {
+    const isFileExisted = await readFile();
+
+    if (!isFileExisted) {
+      await fs.writeFileSync("./user.json", JSON.stringify({ users: [] }));
+    }
+
+    const newUserFile = await readFile();
+    const oldUsers = JSON.parse(newUserFile);
+    oldUsers.users.push({ username, lastname, email });
+    await fs.writeFileSync("./user.json", JSON.stringify(oldUsers));
+    res.send("User created successfully ");
+  } catch (error) {
+    res.status(400).send("Not working");
+  }
+});
+////////    usercreate with id must be uniq
+////////    userin idgaaraa note giideg
+///////       useriin idgaar ene useriiin buh note
+//////
+app.post("/update", (req, res) => {
+  const { username, lastname, email } = req.body;
+
+  res.send("sfasd");
 });
 
 app.get("/", async (req, res) => {
