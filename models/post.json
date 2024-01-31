@@ -1,5 +1,12 @@
 [
-    {
-        
-    }
+  {
+    "username": "bataa",
+    "email": "asd",
+    "password": "qwe"
+  },
+  {
+    "username": "bataa",
+    "email": "asdasd",
+    "password": "qweqwe"
+  }
 ]
