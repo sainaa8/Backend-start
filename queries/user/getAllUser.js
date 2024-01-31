@@ -8,6 +8,7 @@ export const getAllUser = async (req, res) => {
   try {
     const allUserJson = await fs.readFileSync(allUser, "utf-8");
     const allUserParse = JSON.parse(allUserJson);
+    
     return allUserParse;
   } catch (error) {
     throw new Error(error.messege);

@@ -1,6 +1,7 @@
 import { getAllUser } from "../queries/user/getAllUser.js";
 import { createNewSda } from "../queries/user/createNewuser.js";
 import { deleteThatSda } from "../queries/user/deleteUser.js";
+import { updateUser } from "../queries/user/updateUser.js";
 export const getAllUsers = async (req, res) => {
   try {
     const user = await getAllUser(req);
@@ -23,6 +24,14 @@ export const deletedInCon = async (req, res) => {
   try {
     const userDeleted = await deleteThatSda(req);
     res.send(JSON.stringify(userDeleted));
+  } catch (err) {
+    res.status(500).send(err.messege);
+  }
+};
+export const updatePart = async (req, res) => {
+  try {
+    const updatem = await updateUser(req);
+    res.send(JSON.stringify(updatem));
   } catch (err) {
     res.status(500).send(err.messege);
   }

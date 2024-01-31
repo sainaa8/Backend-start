@@ -7,6 +7,11 @@ export const deleteThatSda = async (req, res) => {
     const { email: paramEmail } = req.body;
     const tempDelete = await fs.readFileSync(user);
     const deletedDevise = JSON.parse(tempDelete);
+    const deleteCheck = deletedDevise.find((user) => user.email === paramEmail);
+    if (!deleteCheck) {
+      return "user not exist";
+    }
+
     const deleteByFilter = deletedDevise.filter(
       ({ email }) => email !== paramEmail
     );

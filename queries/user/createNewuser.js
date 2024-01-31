@@ -4,14 +4,14 @@ export const createNewSda = async (req, res) => {
   try {
     const { username, email } = req.body;
     if (!username || !email) {
-      res.end("username or email is missing");
-      console.log("dsadas");
+      return "email or name is missing";
+      // console.log("dsadas");
     }
     const newUserFile = await fs.readFileSync(user, "utf-8");
-    console.log(newUserFile);
     const oldUserFile = JSON.parse(newUserFile);
+
     if (oldUserFile.find((user) => user.email === email)) {
-      throw new Error("User already exist");
+      return "User already exist";
     }
     oldUserFile.push({
       username,
