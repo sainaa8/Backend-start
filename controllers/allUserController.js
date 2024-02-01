@@ -39,9 +39,7 @@ export const updatePart = async (req, res) => {
 };
 export const PostreqToRo = async (req, res) => {
   try {
-    const sign = await PostRequest(req);
-
-    res.send(JSON.stringify(sign));
+    res.status(200).send(req.userData);
   } catch (err) {
     res.status(500).send(err.messege);
   }

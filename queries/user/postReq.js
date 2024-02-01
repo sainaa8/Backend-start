@@ -10,7 +10,7 @@ export const PostRequest = async (req, res) => {
 
     const user = users.find((user) => user.email === paramMail);
 
-    return user;
+    // return user;
   } catch (err) {
     throw new Error(err.messege);
   }

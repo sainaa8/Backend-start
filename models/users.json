@@ -12,5 +12,15 @@
   { "username": "asdf", "email": "assssd" },
   { "username": "asdfUpdated", "email": "asd" },
   { "username": "asdfUpdated", "email": "ao[uh[hsd" },
-  { "username": "1111111", "email": "kkkkkk" }
+  { "username": "1111111", "email": "kkkkkk" },
+  {
+    "username": "asdfgh",
+    "email": "asdasd",
+    "pass": "asd"
+  },
+  {
+    "username": "asdfgh",
+    "email": "asdasd",
+    "password": "$2b$04$NRZ7vMINyZ3EMIXv4cwWtuzCiSAEyE1HoCndjBoani5Pee9UzBnzq"
+  }
 ]

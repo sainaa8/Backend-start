@@ -1,6 +1,7 @@
 import fs from "fs";
+import { compareHash } from "../utils/password-hash.js";
 const userDB =
-  "/Users/23LP8204/Desktop/localday/Backend-start/models/post.json";
+  "/Users/23LP8204/Desktop/localday/Backend-start/models/users.json";
 export const MiddlewareOfLogin = async (req, res, next) => {
   const { password, email: paramMail } = req.body;
   try {
@@ -10,15 +11,20 @@ export const MiddlewareOfLogin = async (req, res, next) => {
     const user = users.find((user) => user.email === paramMail);
 
     if (!user) {
-      res.status(400).send("email or pass is not wrong");
+      res.status(400).send("email or pass is  wrong");
       return;
     }
 
-    if (user.password === password) {
+    const pass = compareHash(password, user.password);
+
+    console.log(pass);
+    ∆
+    if (pass) {
+      req.userData = user;
       next();
       return;
     } else {
-      res.status(400).send("email or pass is wrong");
+      res.status(400).send("email or pass is wrongg");
     }
   } catch (err) {
     res.status(400).send(err.messege);
