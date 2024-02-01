@@ -13,14 +13,30 @@
   { "username": "asdfUpdated", "email": "asd" },
   { "username": "asdfUpdated", "email": "ao[uh[hsd" },
   { "username": "1111111", "email": "kkkkkk" },
-  {
-    "username": "asdfgh",
-    "email": "asdasd",
-    "pass": "asd"
-  },
+  { "username": "asdfghsssss", "email": "asdasd", "pass": "asd" },
   {
     "username": "asdfgh",
     "email": "asdasd",
     "password": "$2b$04$NRZ7vMINyZ3EMIXv4cwWtuzCiSAEyE1HoCndjBoani5Pee9UzBnzq"
+  },
+  {
+    "username": "asdfgh",
+    "email": "asds@gmail.com",
+    "password": "$2b$10$sK6GDV066AKAVsSwABQ4..YMgXubLuxnUL9rakYQtLDEf1A.Ticr2"
+  },
+  {
+    "username": "asdfgh",
+    "email": "asdas@gmail.com",
+    "password": "$2b$10$/ecv4YnKU3FW9oOtpnhOzuS3m8pFPD8w5I7PaWF9J.t0dBvPaRMo."
+  },
+  {
+    "username": "asdfgh",
+    "email": "asdas@gmasssil.com",
+    "ddd": "$2b$10$gmqW.LE33/Sz7Lqz2Qxhu.ZK5GIvABAXEUg66W2lOMUj10qUdXOJa"
+  },
+  {
+    "username": "asdfgh",
+    "email": "111",
+    "password": "$2b$10$Y9YpDr/jsG.ng6EBtiLodO1FINWyyglUA1inITB3vPdGh4ioyy4mu"
   }
 ]

@@ -1,6 +1,6 @@
 import fs from "fs";
 const userDB =
-  "/Users/23LP8204/Desktop/localday/Backend-start/models/post.json";
+  "/Users/23LP8204/Desktop/Node/models/users.json";
 
 export const PostRequest = async (req, res) => {
   const { password, email: paramMail } = req.body;

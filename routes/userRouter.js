@@ -18,7 +18,7 @@ userRouter.post("/users", createNesUser);
 userRouter.delete("/users", deletedInCon);
 userRouter.put("/user/:email", updatePart);
 
-userRouter.post("/sign", MiddlewareOfLogin, PostreqToRo);
+userRouter.post("/user/login", MiddlewareOfLogin, PostreqToRo);
 //post
 
 //put

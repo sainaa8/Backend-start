@@ -1,1 +1,5 @@
-{"users":[{"username":"qwteqer","lastname":"sgadfgadfgad","email":"adgfadf"}]}
+{
+  "users": [
+    { "username": "qwteqer", "lastname": "sgadfgadfgad", "email": "adgfadf" }
+  ]
+}

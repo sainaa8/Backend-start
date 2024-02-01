@@ -1,6 +1,6 @@
 import fs from "fs";
 
-const user = "/Users/23LP8204/Desktop/localday/Backend-start/models/users.json";
+const user = "/Users/23LP8204/Desktop/Node/models/users.json";
 
 export const deleteThatSda = async (req, res) => {
   try {

@@ -15,7 +15,7 @@ export const getAllUsers = async (req, res) => {
 export const createNesUser = async (req, res) => {
   try {
     const userCreated = await createNewSda(req);
-    res.send(JSON.stringify(userCreated));
+    res.send(userCreated);
   } catch (err) {
     res.status(500).send(err.messege);
   }

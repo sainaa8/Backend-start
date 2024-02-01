@@ -1,6 +1,6 @@
 import { error } from "console";
 import fs from "fs";
-const user = "/Users/23LP8204/Desktop/localday/Backend-start/models/users.json";
+const user = "/Users/23LP8204/Desktop/Node/models/users.json";
 export const updateUser = async (req, res) => {
   const { username } = req.body;
   const { email: paramEmail } = req.params;
